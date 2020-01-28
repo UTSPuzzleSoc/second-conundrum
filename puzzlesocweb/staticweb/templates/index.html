@@ -1,0 +1,299 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!--
+••••••••••••••••••••••••
+
+Powered by Type & Grids™
+www.typeandgrids.com
+
+••••••••••••••••••••••••
+-->
+
+<title>UTS Puzzle Society</title>
+<meta name="description" content="The official website of UTS Puzzle Society">
+<meta name="author" content="UTS Puzzle Society">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================================================================= -->
+{% load static %}
+<link rel="stylesheet" href="{% static "css/base.css" %}">
+<link rel="stylesheet" href="{% static "css/themes/type_04.css" %}">
+<link rel="stylesheet" href="{% static "css/themes/color_13.css" %}">
+<link rel="stylesheet" href="{% static "css/timeline.css" %}">
+<link rel="stylesheet" href="{% static "css/countdown_widget.css" %}">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" %}"></script>
+<![endif]-->
+
+<!-- Favicons
+================================================================================================= -->
+<link rel="shortcut icon" href="{% static "images/favicons/favicon.ico" %}">
+<!-- <link rel="apple-touch-icon" href="{% static "images/favicons/apple-touch-icon.png" %}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static "images/favicons/apple-touch-icon-72x72.png" %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static "images/favicons/apple-touch-icon-114x114.png" %}"> -->
+
+<!-- JS
+================================================================================================= -->
+<script src="{% static "js/libs/modernizr.min.js" %}"></script>
+<script src="{% static "js/libs/jquery-1.8.3.min.js" %}"></script>
+<script src="{% static "js/libs/jquery.easing.1.3.min.js" %}"></script>
+<script src="{% static "js/libs/jquery.fitvids.js" %}"></script>
+<script src="{% static "js/script.js" %}"></script>
+
+</head>
+<body>
+
+<!-- Write preloader to page - this allows the site to load for users with JS disabled -->
+<script type="text/javascript">
+	document.write("<div id='sitePreloader'><div id='preloaderImage'><img src='{% static 'images/site_preloader.gif' %}' alt='Preloader' /></div></div>");
+</script>
+
+<div class="container">
+	<!-- Top navigation bar -->
+	<!-- <iframe src="html/navbar.html"></iframe> -->
+	<div class="sixteen columns">
+        <nav class="nav" id="mainNav">
+            <div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul>
+                        <li><button id="homePage">Home</button></li>
+                        <li><button id="puzzlesPage">Puzzles</button></li>
+                        <li><button id="eventsPage">Events</button></li>
+                        <li><button id="aboutPage">About</button></li>
+                        <!-- <li><img id="logo2" style="float:right; cursor:pointer; position:relative; top:40px" src="images/favicons/favicon.ico" width="35" height="35" alt="Logo" /></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <header class="sixteen columns">
+	</header>
+	<hr/>
+	<!-- Home page begins ============================================================== -->
+	<div id="home">
+		<div class="sixteen columns" style="text-align: center;">
+			<div id="logo" class="sixteen columns">
+				<img src="{% static "images/favicons/favicon.ico" %}" width="200" height="200" alt="Logo" />
+				<h1>UTS Puzzle Society</h1>
+				<h2>University of Technology, Sydney</h2>
+			</div>
+		</div>
+		
+		<hr/>
+		
+		<!-- Upcoming / Current event countdown timer -->
+		<div class="sixteen columns" style="text-align: center;">
+			<div class="sixteen columns" id="countdown-widget">
+				<h5 id="countdown-text">Countdown to next event:</h5>
+				<h2 id="countdown-timer">00 : 00 : 00 : 00</h2>
+				<table>
+					<td>DAYS</td>
+					<td>HOURS</td>
+					<td>MINS</td>
+					<td>SECS</td>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="{% static "js/countdown.js" %}"></script>
+		<hr/>
+		<hr/>
+
+		<div class="scrolling sixteen columns">
+			<div class="single-row">
+				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=1" alt="image"></a>
+				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=2" alt="image"></a>
+				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=3" alt="image"></a>
+			</div>
+		</div>	
+	</div>
+	<!-- Home page ends ========================================================================= -->
+
+	<!-- Events page begins ============================================================== -->
+	<div id="events">
+		<div id="events-overview" class="sixteen columns">
+			<h2>EVENT CALENDAR 2020</h2>
+		</div>
+		<hr/>
+		<div class="timeline">
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>Feb 27: <em>O Day</em></h3>
+					<p>Meet us @ UTS Tower Building and win attractive prizes!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-right">
+				<div class="content">
+					<h3>Mar 5: <em>Welcome Party</em></h3>
+					<p>Get to know our team, make new friends, and start off a great puzzling year with some light refreshments!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>Mar 12: <em>Weekly Meetings Start</em></h3>
+					<p>Puzzles, snacks and lovely people, sometimes board games and movies; what more can you ask for? Every Thursday, location TBA.</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-right">
+				<div class="content">
+					<h3>Mar 19: <em>PuzzleSoc and the Magical Arcade Machine</em></h3>
+					<p>Come test your puzzling skills in our retro video games inspired, on campus, first puzzle hunt of 2020. Many prizes to be won!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>Apr 9: <em>Puzzle Soc-ial Event 1</em></h3>
+					<p>What could this be? Karaoke? Escape room? Bowling? Pool? Oooh weee. No one knows!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-right">
+				<div class="content">
+					<h3>Apr 15: <em>PuzzleSoc: Accept our Cookies</em></h3>
+					<p>PuzzleSoc and ActivateUTS will be giving out free baked goods at Level 3A Concourse, UTS Building 1!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>Apr 17: <em>PuzzleSoc and the Holy Grail!</em></h3>
+					<p>Always dreamt of being a Knight of the Roundtable! Look no further than our first online puzzlehunt, happening RIGHT HERE on this website.</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-right">
+				<div class="content">
+					<h3>May 4: <em>PuzzleSoc and the Big, Awesome, Too Good to be True Secret Event</em></h3>
+					<p>.........</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>May 7: <em>Puzzle Soc-ial Event 2</em></h3>
+					<p>Come with me, and you'll be, in a world that's full of relaxation...</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-right">
+				<div class="content">
+					<h3>May 15: <em>PuzzleSoc and the Curse of the Treasure Island</em></h3>
+					<p>Arrrrr! Sum'n be amiss wi'in ya noggin if ye plan on skippin' this swashbuckling, pirate-themed online puzzlehunt!</p>
+				</div>
+			</div>
+			<div class="timeline-container timeline-left">
+				<div class="content">
+					<h3>Jun 4: <em>Puzzle Soc-ial Event 3</em></h3>
+					<p>Have an idea for social event? Join our Discord!</p>
+				</div>
+			</div>
+		  </div>
+	
+	</div>
+	<!-- Events page ends ========================================================================= -->
+	
+	<!-- About page begins ====================================================================== -->
+	<div id="about">
+		
+		<!-- Column 1 begins ==================================================================== -->
+		<div class="eight columns">
+			
+			<h3>About us</h3>
+			<p>
+				We are a society of puzzle enthusiasts from the University of Techonology, Sydney. Our interests include puzzle hunts, escape rooms, brain teasers, and anything that challenges the mind. Our goal is to create a community at UTS where everyone can come together and indulge in their passion for everything puzzles.
+			</p>
+			
+			<h4>President: Duc</h4>
+			<p>
+				Duc is our president. As a president, he knows everything there is to know about being president. If you have presidential business, Duc is the president for you.
+			</p>
+			
+			<h4>Vice President: Aaima</h4>
+			<p>
+				Description here.
+			</p>
+
+			<h4>Secretary: Maryam</h4>
+			<p>
+				Description here.
+			</p>
+
+			<h4>Treasurer: Suwen</h4>
+			<p>
+				Description here.
+			</p>
+			
+			<h4>Marketing Coordinator: Christine</h4>
+			<p>
+				Description here.
+			</p>
+
+			<h4>Events Coordinator: Don't have one</h4>
+			<p>
+				Description here.
+			</p>
+			
+		</div>
+		<!-- Column 1 ends ====================================================================== -->
+		
+		<!-- Column 2 begins ==================================================================== -->
+		<div class="eight columns">
+			
+			<img src="{% static "images/uts.jpg" %}" alt="About" />
+			
+			<ul class="linedList">
+				<li><strong>Location:</strong> University of Technology, Sydney</li>
+				<li><strong>Email us:</strong> <a href="mailto:puzzle@activateuts.com.au">puzzle@activateuts.com.au</a></li>
+				<!-- <li><strong>R&eacute;sum&eacute;:</strong> <a href="{% static "resume.pdf">resume.pdf</a></li> -->
+			</ul>
+
+			<a class="button roundedButton" href="https://www.activateuts.com.au/clubs/uts-puzzle-club" target="_blank">BECOME A MEMBER</a>
+			
+		</div>
+		<!-- Column 2 ends ====================================================================== -->
+		
+	</div>
+	<!-- About page ends ======================================================================== -->
+	
+	<!-- Puzzles page begins ====================================================================== -->
+	<div id="puzzles">
+		
+		<!-- Column 1 begins ==================================================================== -->
+		<div class="sixteen columns">
+			<h3>Have a go at some puzzles!</h3>
+			<p> No puzzles have been published here yet. You can go nag at our President to do it <a href="https://bit.ly/PuzzleSocDiscord" target="_blank">on our Discord!</a></p c>
+		</div>
+		<!-- Column 1 ends ====================================================================== -->
+		
+		<!-- Column 2 begins ==================================================================== -->
+		<div class="eight columns">
+			
+			<!-- <img src="images/scrolling/escape_rooms.jpg" alt="About" /> -->
+			
+		</div>
+		<!-- Column 2 ends ====================================================================== -->
+		
+	</div>
+	<!-- Puzzles page ends ======================================================================== -->
+
+	<!-- Footer begins ========================================================================== -->
+	<hr/>
+	<footer class="sixteen columns">
+		<hr />
+		<ul id="footerLinks">
+			<li>&copy; 2020 UTS Puzzle Society.</li>
+			<li><a href="https://www.facebook.com/utspuzzlesoc" target="_blank">Facebook</a></li>
+			<li><a href="https://www.instagram.com/utspuzzlesoc" target="_blank">Instagram</a></li>
+			<li><a href="https://bit.ly/PuzzleSocDiscord" target="_blank">Discord</a></li>
+			<li><a href="https://www.twitch.tv/utspuzzlesoc" target="_blank">Twitch</a></li>
+			<!--Notice: The "Powered by Type & Grids" link in the footer is required in the Free version. Upgrade to the Pro version if you would like to remove it. (www.typeandgrids.com/pirates) -->
+			<li>Powered by <a href="http://www.typeandgrids.com" target="_blank">Type &amp; Grids</a></li>
+		</ul>
+	</footer>
+	<!-- Footer ends ============================================================================ -->
+		
+</div><!-- container -->
+</body>
+</html>

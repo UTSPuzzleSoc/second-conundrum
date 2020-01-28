@@ -1,0 +1,30 @@
+/* countdown widget */
+#countdown-widget {
+    text-align: center;
+    font-size: 120%;
+    line-height: 1;
+}
+
+#countdown-widget h2 {
+    font-size: 300%;
+}
+
+#countdown-widget table {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -10px;
+}
+#countdown-widget td{
+    padding: 0 5px 0 5px;
+    width: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+    #countdown-widget h2 {
+        font-size: 200%;
+    }
+}
