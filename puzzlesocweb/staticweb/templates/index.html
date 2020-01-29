@@ -262,8 +262,20 @@ www.typeandgrids.com
 		
 		<!-- Column 1 begins ==================================================================== -->
 		<div class="sixteen columns">
-			<h3>Have a go at some puzzles!</h3>
-			<p> No puzzles have been published here yet. You can go nag at our President to do it <a href="https://bit.ly/PuzzleSocDiscord" target="_blank">on our Discord!</a></p c>
+            <h3>Have a go at some puzzles!</h3>
+
+            {% if Puzzle %}
+                <ul>
+                    { % for puzzle in puzzles|safe% }
+                        <li>{{ puzzle.name }}</li>
+                    { % endfor % }
+                </ul>
+
+            {% else %}
+                <p> No puzzles have been published here yet. You can go nag at our President to do it 
+                    <a href="https://bit.ly/PuzzleSocDiscord" target="_blank">on our Discord!</a>
+                </p>
+            {% endif %}
 		</div>
 		<!-- Column 1 ends ====================================================================== -->
 		

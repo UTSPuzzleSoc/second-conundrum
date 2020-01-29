@@ -76,11 +76,22 @@ WSGI_APPLICATION = 'puzzlesocweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_USER'))) as f:
+    __local_user__ = f.read()
+DB_USER = os.getenv('DB_USER') or __local_user__
+
+with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_PASSWORD'))) as f:
+    __local_password__ = f.read()
+DB_PASSWORD = os.getenv('DB_PASSWORD') or __local_password__
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'utspuzzlesoc',
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

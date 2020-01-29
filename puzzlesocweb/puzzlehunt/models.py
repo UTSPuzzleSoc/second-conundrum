@@ -5,6 +5,9 @@ class Puzzle(models.Model):
     created = models.DateTimeField('date created')
     puzzle_type = models.ForeignKey('PuzzleType', on_delete=models.SET_NULL, null=True)
     puzzle_text = models.CharField(max_length=1000, help_text='Enter the puzzle text here')
+    answer = models.CharField(max_length=1000, help_text='The answer for the puzzle.')
+    case_sensitive = models.BooleanField(default=False)
+    difficulty = models.ForeignKey('PuzzleDifficulty', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title
@@ -14,6 +17,12 @@ class Puzzle(models.Model):
 
 class PuzzleType(models.Model):
     name = models.CharField(max_length=100, help_text='Puzzle category (ie. Rebus)')
+
+    def __str__(self):
+        return self.name
+
+class PuzzleDifficulty(models.Model):
+    name = models.CharField(max_length=20)
 
     def __str__(self):
         return self.name
