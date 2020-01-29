@@ -25,7 +25,7 @@ __location__ = os.path.realpath(
 SECRET_KEY = os.getenv('SECRET_KEY') or __location__
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 

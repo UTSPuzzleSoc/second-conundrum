@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Puzzle, PuzzleType, Document, DocumentType
 
-# Register your models here.
+admin.site.register(Puzzle)
+admin.site.register(PuzzleType)
+admin.site.register(Document)
+admin.site.register(DocumentType)
