@@ -10,12 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import os
+import os, socket
 import django_heroku, dj_database_url, psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# for using a local sqlite db instead when testing.
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
@@ -32,10 +33,15 @@ else:
     SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
+# change to ".local" for mac user or whatever your local hostname is.
+if socket.gethostname().endswith("christine-unix"): 
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    DEBUG = True
+else:
+    ALLOWED_HOSTS = ['.herokuapp.com', '[::1]']
+    DEBUG = False
 
 
 # Application definition

@@ -19,48 +19,27 @@ Contents
 /*===================================================================================================
 1) @font-face definitions
 ===================================================================================================*/
-
-@font-face {
-    font-family: 'Grad';
-    src: url('../../fonts/Grad/Grad-Regular-webfont.eot');
-    src: url('../../fonts/Grad/Grad-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Grad/Grad-Regular-webfont.woff') format('woff'),
-         url('../../fonts/Grad/Grad-Regular-webfont.ttf') format('truetype'),
-         url('../../fonts/Grad/Grad-Regular-webfont.svg#Grad') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Grad';
-    src: url('../../fonts/Grad/Grad-Bold-webfont.eot');
-    src: url('../../fonts/Grad/Grad-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Grad/Grad-Bold-webfont.woff') format('woff'),
-         url('../../fonts/Grad/Grad-Bold-webfont.ttf') format('truetype'),
-         url('../../fonts/Grad/Grad-Bold-webfont.svg#Grad') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,400italic,600,700,700italic);
 
 /*===================================================================================================
 2) Styles
 ===================================================================================================*/
 
 #logo h1, #logoDetailView h1 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
-	font-size: 36px;
+	font-size: 34px;
 	line-height: 1.5;
-	letter-spacing: -0.07em;
+	letter-spacing: -0.02em;
 	text-decoration: none;
 	text-transform: none;
 	text-rendering: optimizeLegibility;
 }
 
 #logo h2, #logoDetailView h2 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 400;
     font-style: normal;
 	font-size: 14px;
 	line-height: 1.2;
@@ -71,8 +50,8 @@ Contents
 }
 
 nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 14px;
 	line-height: 1.5;
@@ -83,20 +62,20 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 #overview h3 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 200;
     font-style: normal;
 	font-size: 42px;
 	line-height: 1.2;
-	letter-spacing: -0.04em;
+	letter-spacing: -0.03em;
 	text-decoration: none;
 	text-transform: none;
 	text-rendering: optimizeLegibility;
 }
 
 .projectThumbnailHover h4 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 24px;
 	line-height: 1.2;
@@ -107,8 +86,8 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 .projectThumbnailHover h5 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 400;
     font-style: normal;
 	font-size: 14px;
 	line-height: 1.2;
@@ -119,10 +98,10 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 .projectInfo h4 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.2;
 	letter-spacing: 0;
 	text-decoration: none;
@@ -131,8 +110,8 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 .projectNavCounter {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 400;
     font-style: normal;
 	font-size: 13px;
 	line-height: 1.2;
@@ -143,8 +122,8 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 .projectNavButtons button {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 11px;
 	line-height: 1.2;
@@ -155,8 +134,8 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 .projectNavClose button, .projectNavEnlarge button {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 11px;
 	line-height: 1.2;
@@ -167,43 +146,7 @@ nav ul li a, nav ul li button, nav ul li span, #detailViewBack a {
 }
 
 p, li, .projectInfo p, .projectInfo li {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
-    font-style: normal;
-	font-size: 14px;
-	line-height: 1.3;
-	letter-spacing: 0;
-	text-decoration: none;
-	text-transform: none;
-	text-rendering: auto;
-}
-
-footer p {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
-    font-style: normal;
-	font-size: 14px;
-	line-height: 1.2;
-	letter-spacing: 0;
-	text-decoration: none;
-	text-transform: none;
-	text-rendering: auto;
-}
-
-#footerLinks li {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: normal;
-    font-style: normal;
-	font-size: 14px;
-	line-height: 1.2;
-	letter-spacing: 0;
-	text-decoration: none;
-	text-transform: none;
-	text-rendering: auto;
-}
-
-blockquote, blockquote p {
-	font-family: "Grad", Arial, sans-serif;
+	font-family: "Titillium Web", Arial, sans-serif;
 	font-weight: normal;
     font-style: normal;
 	font-size: 14px;
@@ -214,9 +157,33 @@ blockquote, blockquote p {
 	text-rendering: auto;
 }
 
+footer p, #footerLinks li {
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
+    font-style: normal;
+	font-size: 13px;
+	line-height: 1.2;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: none;
+	text-rendering: auto;
+}
+
+blockquote, blockquote p {
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: normal;
+    font-style: italic;
+	font-size: 14px;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-transform: none;
+	text-rendering: auto;
+}
+
 blockquote cite {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 14px;
 	line-height: 1.3;
@@ -227,15 +194,15 @@ blockquote cite {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
 	letter-spacing: -0.02em;
 	text-transform: none;
 }
 
 #heroNav a {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 16px;
 	line-height: 1.2;
@@ -246,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #formField {
-	font-family: "Grad", Arial, sans-serif;
+	font-family: "Titillium Web", Arial, sans-serif;
 	font-weight: normal;
     font-style: normal;
 	font-size: 14px;
@@ -258,8 +225,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #formSubmit {
-	font-family: "Grad", Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Titillium Web", Arial, sans-serif;
+	font-weight: 600;
     font-style: normal;
 	font-size: 12px;
 	line-height: 1.2;
@@ -269,25 +236,17 @@ h1, h2, h3, h4, h5, h6 {
 	text-rendering: auto;
 }
 
-h5 {
-	font-weight: bold;
-	padding-bottom: 8px;
-	font-size: 12px;
-	letter-spacing: 0.10em;
-	text-transform: uppercase;
-}
-
 /*===================================================================================================
 3) Positioning adjustments
 ===================================================================================================*/
 
 #logo h2, #logoDetailView h2 {
-	margin-top: -20px;
-	padding-left: 1px;
+	margin-top: -19px;
+	padding-left: 2px;
 }
 
 nav {
-	padding-top: 46px;
+	padding-top: 42px;
 	margin-bottom: -30px;
 }
 
@@ -300,8 +259,8 @@ nav ul li {
 }
 
 #overview h3 {
-	margin-top: -7px;
-	margin-bottom: 22px;
+	margin-top: -5px;
+	margin-bottom: 28px;
 }
 
 .projectThumbnailHover h4 {
@@ -309,32 +268,32 @@ nav ul li {
 }
 
 .projectThumbnailHover h5 {
-	padding-top: 69px;
+	padding-top: 67px;
 }
 
 .projectInfo h4 {
-	padding-top: 11px;
+	padding-top: 10px;
 	padding-bottom: 6px;
 }
 
 .projectNavCounter {
-	padding-top: 12px;
+	padding-top: 13px;
 }
 
 .projectNavClose, .projectNavEnlarge {
-	padding-top: 5px;
-	padding-top: 7px\9; /* IE adjustment */
+	padding-top: 4px;
+	padding-top: 6px\9; /* IE adjustment */
 }
 
 .projectNavButtons {
-	padding-top: 5px;
-	padding-top: 7px\9; /* IE adjustment */
+	padding-top: 4px;
+	padding-top: 6px\9; /* IE adjustment */
 }
 
 /* Tweak positioning slightly in Firefox */
 @-moz-document url-prefix() {
   .projectNavEnlarge, .projectNavClose, .projectNavButtons {
-		padding-top: 6px;
+		padding-top: 7px;
 	}
 }
 
@@ -349,7 +308,7 @@ nav ul li {
 
 .projectInfo li, .linedList li {
 	border-top: 1px solid #ddd;
-	margin-top: 6px;
+	margin-top: 8px;
 	margin-bottom: -2px;
 	padding-top: 6px;
 	padding-bottom: 0px;
@@ -357,17 +316,18 @@ nav ul li {
 
 @-moz-document url-prefix() {
 	.projectInfo li, .linedList li {
-		margin-bottom: -2px;
+		margin-bottom: -1px;
 	}
 }
 
 .projectInfo li:last-child {
-	margin-bottom: -3px;
+	margin-bottom: -1px;
 }
 
 .linedList {
 	padding-bottom: 7px;
 }
+
 
 /*===================================================================================================
 4) Media query adjustments
@@ -376,15 +336,11 @@ nav ul li {
 	@media only screen and (max-width: 959px) {
 		
 		nav ul li a, nav ul li button, nav ul li span, #detailViewBack {
-			font-size: 16px;
+			font-size: 14px;
 		}
 		
 		nav {
-			padding-top: 44px;
-		}
-		
-		#overview h3 {
-			font-size: 38px;
+			padding-top: 42px;
 		}
 		
 	}
@@ -393,12 +349,12 @@ nav ul li {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
 		
 		.projectThumbnailHover h4 {
-			font-size: 18px;
+			font-size: 20px;
 		}
 		
 		.projectThumbnailHover h5 {
-			font-size: 12px;
-			padding-top: 61px;
+			font-size: 13px;
+			padding-top: 63px;
 		}
 		
 	}
@@ -420,13 +376,7 @@ nav ul li {
 		
 		nav {
 			padding-top: 9px;
-			margin-bottom: -11px;
-		}
-		
-		@-moz-document url-prefix() {
-			nav {
-				padding-top: 10px;
-			}
+			margin-bottom: -12px;
 		}
 		
 		#overview {
@@ -434,8 +384,7 @@ nav ul li {
 		}
 		
 		#overview h3 {
-			font-size: 30px;
-			line-height: 1.2;
+			font-size: 24px;
 		}
 		
 		footer p {
@@ -447,23 +396,33 @@ nav ul li {
 	/* Mobile landscape size to tablet portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		
+		
+		
 	}
 
 	/* Mobile portrait size to mobile landscape size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
 		
+		#logo h1, #logoDetailView h1 {
+			font-size: 26px;
+		}
+		
+		#logo h2, #logoDetailView h2 {
+			font-size: 14px;
+			margin-top: -12px;
+		}
+		
 		#overview h3 {
-			font-size: 24px;
-			line-height: 1.2;	
+			font-size: 24px;	
 		}
 		
 		.projectThumbnailHover h4 {
-			font-size: 14px;
+			font-size: 16px;
 		}
 		
 		.projectThumbnailHover h5 {
-			font-size: 12px;
-			padding-top: 56px;
+			font-size: 13px;
+			padding-top: 59px;
 		}
 		
 	}

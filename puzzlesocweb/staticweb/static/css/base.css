@@ -570,7 +570,6 @@ Contents
 
 	/* Arrow navigation */
 	.portfolioSlider .arrow {	
-		/*background:url(../img/controlsSprite.png) no-repeat 0 0;*/
 		background-color: #C00;
 		background-repeat: no-repeat;
 		background-position: 0 0;
@@ -1521,7 +1520,6 @@ code {
 }
 
 .thumbnailMask {
-	/*background-image: url("../images/masks/rounded.png");*/
 	/*
 	Disable pointer events to allow swipe navigation - needed to use a svg instead of a div since no versions of IE support pointer events on divs
 	*/
