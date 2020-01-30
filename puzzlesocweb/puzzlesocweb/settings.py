@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')# or __location__
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'utspuzzlesoc.herokuapp.com']]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'utspuzzlesoc.herokuapp.com']
 
 
 # Application definition
@@ -86,14 +86,7 @@ WSGI_APPLICATION = 'puzzlesocweb.wsgi.application'
 #     __local_password__ = f.read()
 # DB_PASSWORD = os.getenv('DB_PASSWORD') #or __local_password__
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'utspuzzlesoc',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+DATABASES = {}
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASE_URL = os.environ['DATABASE_URL']
