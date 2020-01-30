@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
+import django_heroku, dj_database_url, psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,14 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-__location__ = os.path.realpath(
-    os.path.join(os.getcwd(), 'LOCAL_SECRET_KEY'))
-SECRET_KEY = os.getenv('SECRET_KEY') or __location__
+# __location__ = os.path.realpath(
+#     os.path.join(os.getcwd(), 'LOCAL_SECRET_KEY'))
+SECRET_KEY = os.getenv('SECRET_KEY')# or __location__
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'utspuzzlesoc.herokuapp.com']]
 
 
 # Application definition
@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'puzzlehunt',
     'staticweb',
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -74,28 +76,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'puzzlesocweb.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_USER'))) as f:
-    __local_user__ = f.read()
-DB_USER = os.getenv('DB_USER') or __local_user__
+# with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_USER'))) as f:
+#     __local_user__ = f.read()
+# DB_USER = os.getenv('DB_USER') #or __local_user__
 
-with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_PASSWORD'))) as f:
-    __local_password__ = f.read()
-DB_PASSWORD = os.getenv('DB_PASSWORD') or __local_password__
+# with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_PASSWORD'))) as f:
+#     __local_password__ = f.read()
+# DB_PASSWORD = os.getenv('DB_PASSWORD') #or __local_password__
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'utspuzzlesoc',
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
         'PORT': '',
     }
 }
 
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
