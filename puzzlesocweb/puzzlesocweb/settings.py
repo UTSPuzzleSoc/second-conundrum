@@ -21,7 +21,6 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -37,10 +36,11 @@ else:
 
 # change to ".local" for mac user or whatever your local hostname is.
 if socket.gethostname().endswith("christine-unix"): 
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+    DEBUG_PROPAGATE_EXCEPTIONS = True
     DEBUG = True
 else:
-    ALLOWED_HOSTS = ['.herokuapp.com', '[::1]']
+    ALLOWED_HOSTS = [".herokuapp.com", "[::1]"]
     DEBUG = False
 
 
