@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'puzzlesocweb.urls'
+ROOT_URLCONF = 'puzzlesocweb.puzzlesocweb.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'puzzlesocweb.wsgi.application'
+WSGI_APPLICATION = 'puzzlesocweb.puzzlesocweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
