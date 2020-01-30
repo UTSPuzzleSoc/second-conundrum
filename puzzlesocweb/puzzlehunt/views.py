@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 
-from puzzlehunt.models import Document
-from puzzlehunt.models import DocumentType
+from puzzlesocweb.puzzlehunt.models import Document
+from puzzlesocweb.puzzlehunt.models import DocumentType
 
 def document_form_upload(request):
     if request.method == 'POST':
