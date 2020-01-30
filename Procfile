@@ -1,1 +1,1 @@
-web: gunicorn puzzlesocweb.wsgi:application --log-file -
+web: gunicorn puzzlesocweb.puzzlesocweb.wsgi:application --log-file -
