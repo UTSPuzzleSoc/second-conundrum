@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
-    'puzzlehunt',
-    'staticweb',
+    'puzzlesocweb.puzzlehunt',
+    'puzzlesocweb.staticweb',
 ]
 
 MIDDLEWARE = [
