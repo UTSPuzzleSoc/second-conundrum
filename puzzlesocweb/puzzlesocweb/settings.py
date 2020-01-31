@@ -91,19 +91,11 @@ WSGI_APPLICATION = 'puzzlesocweb.puzzlesocweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-# with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_USER'))) as f:
-#     __local_user__ = f.read()
-# DB_USER = os.getenv('DB_USER') #or __local_user__
-
-# with open(os.path.realpath(os.path.join(os.getcwd(), 'DB_PASSWORD'))) as f:
-#     __local_password__ = f.read()
-# DB_PASSWORD = os.getenv('DB_PASSWORD') #or __local_password__
-
 DATABASES = {}
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-# DATABASE_URL = os.environ['DATABASE_URL']
-# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
