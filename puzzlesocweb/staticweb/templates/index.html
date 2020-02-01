@@ -2,11 +2,14 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
 
-<!--
+<head>
+	<meta charset="utf-8">
+
+	<!--
 ••••••••••••••••••••••••
 
 Powered by Type & Grids™
@@ -15,97 +18,98 @@ www.typeandgrids.com
 ••••••••••••••••••••••••
 -->
 
-<title>UTS Puzzle Society</title>
-<meta name="description" content="The official website of UTS Puzzle Society">
-<meta name="author" content="UTS Puzzle Society">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>UTS Puzzle Society</title>
+	<meta name="description" content="The official website of UTS Puzzle Society">
+	<meta name="author" content="UTS Puzzle Society">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
+	<!-- CSS
 ================================================================================================= -->
-{% load static %}
-<link rel="stylesheet" href="{% static "css/base.css" %}">
-<link rel="stylesheet" href="{% static "css/themes/type_04.css" %}">
-<link rel="stylesheet" href="{% static "css/themes/color_13.css" %}">
-<link rel="stylesheet" href="{% static "css/timeline.css" %}">
-<link rel="stylesheet" href="{% static "css/countdown_widget.css" %}">
+	{% load static %}
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<link rel="stylesheet" href="{% static "css/themes/type_04.css" %}">
+	<link rel="stylesheet" href="{% static "css/themes/color_13.css" %}">
+	<link rel="stylesheet" href="{% static "css/timeline.css" %}">
+	<link rel="stylesheet" href="{% static "css/countdown_widget.css" %}">
 
-<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" %}"></script>
 <![endif]-->
 
-<!-- Favicons
+	<!-- Favicons
 ================================================================================================= -->
-<link rel="shortcut icon" href="{% static "images/favicons/favicon.ico" %}">
+	<link rel="shortcut icon" href="{% static "images/favicons/favicon.ico" %}">
 
-<!-- JS
+	<!-- JS
 ================================================================================================= -->
-<script src="{% static "js/libs/modernizr.min.js" %}"></script>
-<script src="{% static "js/libs/jquery-1.8.3.min.js" %}"></script>
-<script src="{% static "js/libs/jquery.easing.1.3.min.js" %}"></script>
-<script src="{% static "js/libs/jquery.fitvids.js" %}"></script>
-<script src="{% static "js/script.js" %}"></script>
+	<script src="{% static "js/libs/modernizr.min.js" %}"></script>
+	<script src="{% static "js/libs/jquery-1.8.3.min.js" %}"></script>
+	<script src="{% static "js/libs/jquery.easing.1.3.min.js" %}"></script>
+	<script src="{% static "js/libs/jquery.fitvids.js" %}"></script>
+	<script src="{% static "js/script.js" %}"></script>
 
 </head>
+
 <body>
 
-<!-- Write preloader to page - this allows the site to load for users with JS disabled -->
-<script type="text/javascript">
-	document.write("<div id='sitePreloader'><div id='preloaderImage'><img src='{% static 'images/site_preloader.gif' %}' alt='Preloader' /></div></div>");
-</script>
+	<!-- Write preloader to page - this allows the site to load for users with JS disabled -->
+	<script type="text/javascript">
+		document.write("<div id='sitePreloader'><div id='preloaderImage'><img src='{% static 'images/site_preloader.gif' %}' alt='Preloader' /></div></div>");
+	</script>
 
-<div class="container">
-	<!-- Top navigation bar -->
-	<!-- <iframe src="html/navbar.html"></iframe> -->
-	<div class="sixteen columns">
-        <nav class="nav" id="mainNav">
-            <div>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul>
-                        <li><button id="homePage">Home</button></li>
-                        <li><button id="puzzlesPage">Puzzles</button></li>
-                        <li><button id="eventsPage">Events</button></li>
-                        <li><button id="aboutPage">About</button></li>
-                        <!-- <li><img id="logo2" style="float:right; cursor:pointer; position:relative; top:40px" src="images/favicons/favicon.ico" width="35" height="35" alt="Logo" /></li> -->
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <header class="sixteen columns">
-	</header>
-	<hr/>
-	<!-- Home page begins ============================================================== -->
-	<div id="home">
-		<div class="sixteen columns" style="text-align: center;">
-			<div id="logo" class="sixteen columns">
-				<img src="{% static "images/favicons/favicon.ico" %}" width="200" height="200" alt="Logo" />
-				<h1>UTS Puzzle Society</h1>
-				<h2>University of Technology, Sydney</h2>
-			</div>
+	<div class="container">
+		<!-- Top navigation bar -->
+		<!-- <iframe src="html/navbar.html"></iframe> -->
+		<div class="sixteen columns">
+			<nav class="nav" id="mainNav">
+				<div>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul>
+							<li><button id="homePage">Home</button></li>
+							<li><button id="puzzlesPage">Puzzles</button></li>
+							<li><button id="eventsPage">Events</button></li>
+							<li><button id="aboutPage">About</button></li>
+							<!-- <li><img id="logo2" style="float:right; cursor:pointer; position:relative; top:40px" src="images/favicons/favicon.ico" width="35" height="35" alt="Logo" /></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</div>
-		
-		<hr/>
-		
-		<!-- Upcoming / Current event countdown timer -->
-		<div class="sixteen columns" style="text-align: center;">
-			<div class="sixteen columns" id="countdown-widget">
-				<h5 id="countdown-text">Countdown to next event:</h5>
-				<h2 id="countdown-timer">00 : 00 : 00 : 00</h2>
-				<table>
-					<td>DAYS</td>
-					<td>HOURS</td>
-					<td>MINS</td>
-					<td>SECS</td>
-				</table>
+		<header class="sixteen columns">
+		</header>
+		<hr />
+		<!-- Home page begins ============================================================== -->
+		<div id="home">
+			<div class="sixteen columns" style="text-align: center;">
+				<div id="logo" class="sixteen columns">
+					<img src="{% static "images/favicons/favicon.ico" %}" width="200" height="200" alt="Logo" />
+					<h1>UTS Puzzle Society</h1>
+					<h2>University of Technology, Sydney</h2>
+				</div>
 			</div>
-		</div>
-		<script type="text/javascript" src="{% static "js/countdown.js" %}"></script>
-		<hr/>
-		<hr/>
 
-		<div class="scrolling sixteen columns">
-			<div class="single-row">
-				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=1" alt="image"></a>
+			<hr />
+
+			<!-- Upcoming / Current event countdown timer -->
+			<div class="sixteen columns" style="text-align: center;">
+				<div class="sixteen columns" id="countdown-widget">
+					<h5 id="countdown-text">Countdown to next event:</h5>
+					<h2 id="countdown-timer">00 : 00 : 00 : 00</h2>
+					<table>
+						<td>DAYS</td>
+						<td>HOURS</td>
+						<td>MINS</td>
+						<td>SECS</td>
+					</table>
+				</div>
+			</div>
+			<script type="text/javascript" src="{% static "js/countdown.js" %}"></script>
+			<hr />
+			<hr />
+
+			<div class="scrolling sixteen columns">
+				<div class="single-row">
+					<a href="{% static "#"><img src="https://picsum.photos/300/300?random=1" alt="image"></a>
 				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=2" alt="image"></a>
 				<a href="{% static "#"><img src="https://picsum.photos/300/300?random=3" alt="image"></a>
 			</div>
@@ -239,70 +243,74 @@ www.typeandgrids.com
 		<div class="eight columns">
 			
 			<img src="{% static "images/uts.jpg" %}" alt="About" />
-			
-			<ul class="linedList">
-				<li><strong>Location:</strong> University of Technology, Sydney</li>
-				<li><strong>Email us:</strong> <a href="mailto:puzzle@activateuts.com.au">puzzle@activateuts.com.au</a></li>
-				<!-- <li><strong>R&eacute;sum&eacute;:</strong> <a href="{% static "resume.pdf">resume.pdf</a></li> -->
-			</ul>
 
-			<a class="button roundedButton" href="https://www.activateuts.com.au/clubs/uts-puzzle-club" target="_blank">BECOME A MEMBER</a>
-			
-		</div>
-		<!-- Column 2 ends ====================================================================== -->
-		
-	</div>
-	<!-- About page ends ======================================================================== -->
-	
-	<!-- Puzzles page begins ====================================================================== -->
-	<div id="puzzles">
-		
-		<!-- Column 1 begins ==================================================================== -->
-		<div class="sixteen columns">
-			<h3>Have a go at some puzzles!</h3>
-			{% if puzzles %}
-				<div>
-					<ul>
-						{% for puzzle in puzzles %}
-							<li><a href="#">{{ puzzle.title }} Difficulty: {{puzzle.difficulty}}</a></li>
-						{% endfor %}
+					<ul class="linedList">
+						<li><strong>Location:</strong> University of Technology, Sydney</li>
+						<li><strong>Email us:</strong> <a
+								href="mailto:puzzle@activateuts.com.au">puzzle@activateuts.com.au</a></li>
+						<!-- <li><strong>R&eacute;sum&eacute;:</strong> <a href="{% static "resume.pdf">resume.pdf</a></li> -->
 					</ul>
-				</div>
-            {% else %}
-                <p> No puzzles have been published here yet. You can go nag at our President to do it 
-                    <a href="https://bit.ly/PuzzleSocDiscord" target="_blank">on our Discord!</a>
-                </p>
-            {% endif %}
-		</div>
-		<!-- Column 1 ends ====================================================================== -->
-		
-		<!-- Column 2 begins ==================================================================== -->
-		<div class="eight columns">
-			
-			<!-- <img src="images/scrolling/escape_rooms.jpg" alt="About" /> -->
-			
-		</div>
-		<!-- Column 2 ends ====================================================================== -->
-		
-	</div>
-	<!-- Puzzles page ends ======================================================================== -->
 
-	<!-- Footer begins ========================================================================== -->
-	<hr/>
-	<footer class="sixteen columns">
-		<hr />
-		<ul id="footerLinks">
-			<li>&copy; 2020 UTS Puzzle Society.</li>
-			<li><a href="https://www.facebook.com/utspuzzlesoc" target="_blank">Facebook</a></li>
-			<li><a href="https://www.instagram.com/utspuzzlesoc" target="_blank">Instagram</a></li>
-			<li><a href="https://bit.ly/PuzzleSocDiscord" target="_blank">Discord</a></li>
-			<li><a href="https://www.twitch.tv/utspuzzlesoc" target="_blank">Twitch</a></li>
-			<!--Notice: The "Powered by Type & Grids" link in the footer is required in the Free version. Upgrade to the Pro version if you would like to remove it. (www.typeandgrids.com/pirates) -->
-			<li>Powered by <a href="http://www.typeandgrids.com" target="_blank">Type &amp; Grids</a></li>
-		</ul>
-	</footer>
-	<!-- Footer ends ============================================================================ -->
-		
-</div><!-- container -->
+					<a class="button roundedButton" href="https://www.activateuts.com.au/clubs/uts-puzzle-club"
+						target="_blank">BECOME A MEMBER</a>
+
+				</div>
+				<!-- Column 2 ends ====================================================================== -->
+
+			</div>
+			<!-- About page ends ======================================================================== -->
+
+			<!-- Puzzles page begins ====================================================================== -->
+			<div id="puzzles">
+
+				<!-- Column 1 begins ==================================================================== -->
+				<div class="sixteen columns">
+					<h3>Have a go at some puzzles!</h3>
+					{% if puzzles %}
+					<div>
+						<ul class="cirle">
+							{% for puzzle in puzzles %}
+							<li><a href="{% url 'puzzle-view' puzzle.id %}">{{ puzzle.title }} Difficulty:
+									{{puzzle.difficulty}}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					{% else %}
+					<p> No puzzles have been published here yet. You can go nag at our President to do it
+						<a href="https://bit.ly/PuzzleSocDiscord" target="_blank">on our Discord!</a>
+					</p>
+					{% endif %}
+				</div>
+				<!-- Column 1 ends ====================================================================== -->
+
+				<!-- Column 2 begins ==================================================================== -->
+				<div class="eight columns">
+
+					<!-- <img src="images/scrolling/escape_rooms.jpg" alt="About" /> -->
+
+				</div>
+				<!-- Column 2 ends ====================================================================== -->
+
+			</div>
+			<!-- Puzzles page ends ======================================================================== -->
+
+			<!-- Footer begins ========================================================================== -->
+			<hr />
+			<footer class="sixteen columns">
+				<hr />
+				<ul id="footerLinks">
+					<li>&copy; 2020 UTS Puzzle Society.</li>
+					<li><a href="https://www.facebook.com/utspuzzlesoc" target="_blank">Facebook</a></li>
+					<li><a href="https://www.instagram.com/utspuzzlesoc" target="_blank">Instagram</a></li>
+					<li><a href="https://bit.ly/PuzzleSocDiscord" target="_blank">Discord</a></li>
+					<li><a href="https://www.twitch.tv/utspuzzlesoc" target="_blank">Twitch</a></li>
+					<!--Notice: The "Powered by Type & Grids" link in the footer is required in the Free version. Upgrade to the Pro version if you would like to remove it. (www.typeandgrids.com/pirates) -->
+					<li>Powered by <a href="http://www.typeandgrids.com" target="_blank">Type &amp; Grids</a></li>
+				</ul>
+			</footer>
+			<!-- Footer ends ============================================================================ -->
+
+		</div><!-- container -->
 </body>
+
 </html>
