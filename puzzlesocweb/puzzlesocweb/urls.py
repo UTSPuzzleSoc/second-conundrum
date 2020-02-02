@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from puzzlesocweb.staticweb import views
+from puzzlesocweb.web import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('puzzlesocweb.staticweb.urls')),
+    path('', include('puzzlesocweb.web.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

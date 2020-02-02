@@ -42,8 +42,8 @@ class Migration(migrations.Migration):
                 ('puzzle_text', models.CharField(help_text='Enter the puzzle text here', max_length=1000)),
                 ('answer', models.CharField(help_text='The answer for the puzzle.', max_length=1000)),
                 ('case_sensitive', models.BooleanField(default=False)),
-                ('difficulty', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='staticweb.PuzzleDifficulty')),
-                ('puzzle_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='staticweb.PuzzleType')),
+                ('difficulty', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='web.PuzzleDifficulty')),
+                ('puzzle_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='web.PuzzleType')),
             ],
         ),
         migrations.CreateModel(
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
                 ('document', models.FileField(upload_to='document_uploads/')),
                 ('uploaded_at', models.DateTimeField(auto_now_add=True)),
                 ('description', models.CharField(blank=True, help_text='Optional description for the document.', max_length=255)),
-                ('document_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='staticweb.DocumentType')),
+                ('document_type', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='web.DocumentType')),
             ],
         ),
     ]
