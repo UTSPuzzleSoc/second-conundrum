@@ -21,7 +21,6 @@ from puzzlesocweb.staticweb import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('puzzlehunt/', include('puzzlesocweb.puzzlehunt.urls')),
     path('', include('puzzlesocweb.staticweb.urls')),
 ]
 

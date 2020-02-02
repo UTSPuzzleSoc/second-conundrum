@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.template import RequestContext, loader
-from puzzlesocweb.puzzlehunt.models import Puzzle
+from .models import Puzzle
 
 def index(request):
     puzzle_list = Puzzle.objects.all().order_by("-title")
